@@ -1,12 +1,10 @@
 n = gets.chomp.to_i
 answer_set = []
-
-n.times do |i|
-  answer_of_ai_count = gets.chomp.to_i
-  answer_of_ai_count.times do |ans|
-    x, y = gets.chomp.split.map(&:to_i)
-    answer_set[i][x-1] = (y == 1)
+for i in 1..n
+  a = gets.to_i
+  answer_set[i] = []
+  for j in 0..a-1
+    answer_set[i][j] = gets.split
   end
 end
-
 p answer_set
